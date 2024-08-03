@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -10,14 +11,16 @@ int main() {
     cout<<"Enter 1 for addition"<<endl<<"Enter 2 for subtraction"<<endl<<"Enter 3 for multiplication"<<endl<<"Enter 4 for division"<<endl<<"Enter 0 to exit"<<endl;//Menu
     cout<<endl;
     cout<<"Enter the operation: "<<endl;
-    int num1, num2;
+    cin>>choice;
+    if(choice==0){
+        cout<<"Thank you. Bye!";
+        return 0;
+    }
+    double num1, num2;
     cout<<"Enter first number: "<<endl;
     cin>>num1;
     cout <<"Enter second number: "<<endl;
     cin >>num2;
-    
-    
-    cin>>choice;
     switch(choice) {
         case 1:
             cout<<"Result: "<<num1 + num2<<endl;
@@ -29,14 +32,16 @@ int main() {
             cout<<"Result: " <<num1 * num2<<endl;
             break;
         case 4:
-            if(num2 != 0)
+            if(num2 != 0){
+                cout << fixed << setprecision(2);
                 cout<<"Result: " <<num1 / num2<<endl;
+            }
             else
                 cout<<"Error! Division by zero."<<endl;
             break;
-         case 0:
+        /*case 0:
             cout<<"Thank you. Bye!";
-            return 0;
+            return 0;*/
         default:
             cout<<"Invalid operator!"<<endl;
             break;
