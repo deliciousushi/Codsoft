@@ -9,14 +9,14 @@ int main() {
     while(true){
     cout<<"Enter 1 for addition"<<endl<<"Enter 2 for subtraction"<<endl<<"Enter 3 for multiplication"<<endl<<"Enter 4 for division"<<endl<<"Enter 0 to exit"<<endl;//Menu
     cout<<endl;
-    
+    cout<<"Enter the operation: "<<endl;
     int num1, num2;
     cout<<"Enter first number: "<<endl;
     cin>>num1;
     cout <<"Enter second number: "<<endl;
     cin >>num2;
     
-    cout<<"Enter the operation: "<<endl;
+    
     cin>>choice;
     switch(choice) {
         case 1:
